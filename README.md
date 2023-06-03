@@ -14,14 +14,14 @@ Machine learning-based spam detection models learn from a set of labeled trainin
 
 We will be using the Ling-Spam (as used in a previous assignment). The Ling-Spam dataset is a collection of 2,893 spam and non-spam messages curated from Linguist List. The messages in the dataset revolve around linguistic interests, such as job postings, research opportunities and software discussion.
 
-Acknowledgements
+#### Acknowledgements
 
-The dataset and its information come from the original authors of "A Memory-Based Approach to Anti-Spam Filtering for Mailing Lists". The dataset was made publicly available as a part of that paper. \
-
-
+The dataset and its information come from the original authors of "A Memory-Based Approach to Anti-Spam Filtering for Mailing Lists". The dataset was made publicly available as a part of that paper. 
 
 
-### Bibliography
+
+
+## Bibliography
 
 - (1) Q. Cheng, A. Xu, X. Li, and L. Ding, “Adversarial Email Generation against Spam Detection Models through Feature Perturbation,” The 2022 IEEE International Conference on Assured Autonomy (ICAA’22), Virtual Event, March 22-23, 2022.
 
