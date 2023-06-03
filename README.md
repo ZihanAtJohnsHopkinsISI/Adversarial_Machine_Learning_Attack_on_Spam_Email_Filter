@@ -18,6 +18,10 @@ We will be using the Ling-Spam (as used in a previous assignment). The Ling-Spam
 
 The dataset and its information come from the original authors of "A Memory-Based Approach to Anti-Spam Filtering for Mailing Lists". The dataset was made publicly available as a part of that paper. 
 
+##### Additional Information of Three Datasets
+
+In the above operation, we divided the entire dataset into three parts: training dataset, validation dataset, and testing dataset. This is done to evaluate the performance of our machine learning model on new and unseen data. The training dataset is used to train the model, the validation dataset is used to tune the model's hyperparameters(magic words in our application), and the testing dataset is used to evaluate the final performance of the model.
+
 
 
 
