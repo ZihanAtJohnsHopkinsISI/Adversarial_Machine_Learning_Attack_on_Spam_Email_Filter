@@ -31,9 +31,38 @@ In the above operation, we divided the entire dataset into three parts: training
 
 - (2). We converted all words to their lowercase forms and combined each paragraph into a single line instead of multiple lines.
 
-- (3). We conducted stemming on all the remaining words to reduce them to their root forms. \
+- (3). We conducted stemming on all the remaining words to reduce them to their root forms.
 
 
+## Feature Extraction
+
+In this step, we aim to transform the text content of an email into a numerical feature vector that captures the essential information used for classification. To achieve this, we can choose from a variety of vectorization techniques that convert text data into numerical vectors.
+
+
+## Training SVM Classifiers
+
+In this section, we will train a Support Vector Machine (SVM) as an spam filter. 
+
+
+## PGD Attack
+
+Our approach is based on successful adversarial perturbations made to model input features. We employ the Projected Gradient Descent (PGD) method to modify numeric feature values in the feature domain. PGD algorithm iteratively finds the needed changes with a constraint, dmax, which is the Euclidean distance to the original features indicating the allowed level of perturbations, to achieve the maximum loss in classification. In our approach, we run PGD over a set of spam emails and generate adversarial examples. Then we test these modified feature vectors to see whether they could successfully bypass the detection (i.e., being classified as ham). 
+
+
+## Magical Words
+
+Adversarial emails are crafted by adding “magic words” to the original spam emails. The “magic words” are identified by intersecting the unique ham words with the “top words” identified during the adversarial perturbations. Specifically, the unique ham words are the words that only appear in ham emails but not in spam emails. After the PGD attack on the set of spam emails, we find which features are modified to the largest extent to bypass the detection. We then select a list of “top words” whose feature values have been changed the most. (The changes are measured by the variance of differences before and after the PGD perturbation.) In our experiments, we use the top 100 words, which is efficient. This set is relatively small and demonstrates a high success rate with the resulting magic words to fool the classifier. 
+
+
+## Crafting Adversarial Emails & Attacking SVM
+
+We can insert the identified "magic words" to original spam emails. This proccess is what we called "crafting adversarial emails". Then, we feed the new feature vectors of these crafted emails to the SVM classifier to see if they can be misclassified as ham emails.
+
+
+## Check other possible email filter system and compare the result
+
+rain KNN classifiers, Random Forest, XGBoost, with the same training dataset provided and the two feature extraction methods you have used to obtain the set of magic word you selected. Here you build two spam filters using a different algorithm. Please show the false negative rates on the testing dataset.
+Pick 100 spam emails and add the magic words to them. Feed them to the two KNN classifiers. Calculate the false negative rates. Can you tell whether the attacks are successful? Ans: Both of the attack success since fn rate of KNN classifiers is higher after the attack happened
 
 
 ## Bibliography
