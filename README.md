@@ -14,13 +14,24 @@ Machine learning-based spam detection models learn from a set of labeled trainin
 
 We will be using the Ling-Spam (as used in a previous assignment). The Ling-Spam dataset is a collection of 2,893 spam and non-spam messages curated from Linguist List. The messages in the dataset revolve around linguistic interests, such as job postings, research opportunities and software discussion.
 
-#### Acknowledgements
+##### Acknowledgements
 
 The dataset and its information come from the original authors of "A Memory-Based Approach to Anti-Spam Filtering for Mailing Lists". The dataset was made publicly available as a part of that paper. 
 
 ##### Additional Information of Three Datasets
 
 In the above operation, we divided the entire dataset into three parts: training dataset, validation dataset, and testing dataset. This is done to evaluate the performance of our machine learning model on new and unseen data. The training dataset is used to train the model, the validation dataset is used to tune the model's hyperparameters(magic words in our application), and the testing dataset is used to evaluate the final performance of the model.
+
+
+## Preprocessing the Emails
+
+**To extract only useful information from the emails we used, we applied serveral data preprocessing steps.**
+
+- (1). We removed all HTML tags, numbers, punctuation marks, and English stop words.
+
+- (2). We converted all words to their lowercase forms and combined each paragraph into a single line instead of multiple lines.
+
+- (3). We conducted stemming on all the remaining words to reduce them to their root forms. \
 
 
 
