@@ -1,4 +1,4 @@
-# Adversarial_Machine_Learning_Attack_on_Spam_Email_Filter
+# Adversarial Machine Learning Attack on Spam Email Filter
 
 
 ## Introduction
